@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleApp
@@ -10,16 +9,8 @@ namespace ConsoleApp
         {
             Enumerable
                 .Range(1, 3)
-                .MyForEach(Console.WriteLine);
-            
-        }
-
-        private static void MyForEach<T>(this IEnumerable<T> data, Action<T> action)
-        {
-            foreach (var item in data)
-            {
-                action(item);
-            }
+                .ToList()
+                .ForEach(Console.WriteLine);
         }
     }
 }
