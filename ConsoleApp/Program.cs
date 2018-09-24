@@ -13,7 +13,7 @@ namespace ConsoleApp
             MyForEach(data, Console.WriteLine);
         }
 
-        private static void MyForEach(IEnumerable<int> data, Action<int> action)
+        private static void MyForEach<T>(IEnumerable<T> data, Action<T> action)
         {
             foreach (var item in data)
             {
