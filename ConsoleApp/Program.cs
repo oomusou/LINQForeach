@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using static System.Linq.Enumerable;
+using static System.Console;
 
 namespace ConsoleApp
 {
@@ -7,10 +7,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Enumerable
-                .Range(1, 3)
+            Range(1, 3)
                 .ToList()
-                .ForEach(Console.WriteLine);
+                .ForEach(WriteLine);
         }
     }
 }
