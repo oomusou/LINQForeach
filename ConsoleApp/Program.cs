@@ -4,16 +4,17 @@ using System.Linq;
 
 namespace ConsoleApp
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            var data = Enumerable.Range(1, 3);
+            Enumerable
+                .Range(1, 3)
+                .MyForEach(Console.WriteLine);
             
-            MyForEach(data, Console.WriteLine);
         }
 
-        private static void MyForEach<T>(IEnumerable<T> data, Action<T> action)
+        private static void MyForEach<T>(this IEnumerable<T> data, Action<T> action)
         {
             foreach (var item in data)
             {
